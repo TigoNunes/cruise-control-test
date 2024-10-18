@@ -5,18 +5,18 @@ Parameters:
   InstanceType:
     Description: Cruise Control EC2 instance type
     Type: String
-    Default: m5.large
+    Default: m5.large #Verificar se a instância é viável 
     AllowedValues:
       - m5.large
     ConstraintDescription: Must be a valid EC2 instance type.
   targetjsonpath:
     Description: Prometheus targets.json S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/targets.json
+    Default: s3://BUCKETNAME/PATH/targets.json #Alterar para nome do meu bucket s3
   prometheusymlpath:
     Description: Prometheus prometheus.yml S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/prometheus.yml
+    Default: s3://BUCKETNAME/PATH/prometheus.yml  #Alterar para nome do meu bucket s3
   AuthType:
     Type: String
     Description: Select the MSK Auth type
@@ -31,8 +31,9 @@ Parameters:
   capacityCores:
     Description: CruiseControl capacityCores.json S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/capacityCores.json
+    Default: s3://BUCKETNAME/PATH/capacityCores.json #Alterar para nome do meu bucket s3
   
+  # Verificar as subnet id ---------------
   SubnetId:
     Description: Enter the subnet id associated with your MSK cluster
     Type: AWS::EC2::Subnet::Id
@@ -41,6 +42,7 @@ Parameters:
     Type: AWS::EC2::SecurityGroup::Id
     Description: Enter the Security Group ID associated with your MSK cluster
     Default: sg-0cSAMPLE  
+#----------------------------------------
 Mappings:
   AWSInstanceType2Arch:
     m5.large:
