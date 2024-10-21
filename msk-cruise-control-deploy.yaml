@@ -12,11 +12,11 @@ Parameters:
   targetjsonpath:
     Description: Prometheus targets.json S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/targets.json #Alterar para nome do meu bucket s3
+    Default: s3://dba-dev-bucket-msk-log-test/cruise-control/targets.json #Alterar para nome do meu bucket s3
   prometheusymlpath:
     Description: Prometheus prometheus.yml S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/prometheus.yml  #Alterar para nome do meu bucket s3
+    Default: s3://dba-dev-bucket-msk-log-test/cruise-control/prometheus.yml  #Alterar para nome do meu bucket s3
   AuthType:
     Type: String
     Description: Select the MSK Auth type
@@ -27,21 +27,21 @@ Parameters:
   bootstrapservers:
     Description: Choose MSK bootstrap servers for the correct Authentication type (IAM, Plaintext)
     Type: 'String'
-    Default: b-6.SAMPLE.kafka.ap-southeast-2.amazonaws.com:9098,b-5.SAMPLE.kafka.ap-southeast-2.amazonaws.com:9098,b-4.SAMPLE.kafka.ap-southeast-2.amazonaws.com:9098
+    Default: b-1.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:9098,b-2.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:9098,b-3.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:9098
   capacityCores:
     Description: CruiseControl capacityCores.json S3 location
     Type: 'String'
-    Default: s3://BUCKETNAME/PATH/capacityCores.json #Alterar para nome do meu bucket s3
+    Default: s3://dba-dev-bucket-msk-log-test/cruise-control/capacityCores.json #Alterar para nome do meu bucket s3
   
   # Verificar as subnet id ---------------
   SubnetId:
     Description: Enter the subnet id associated with your MSK cluster
     Type: AWS::EC2::Subnet::Id
-    Default: subnet-123SAMPLE
+    Default: subnet-a08875c7 
   SecurityGroupId:
     Type: AWS::EC2::SecurityGroup::Id
     Description: Enter the Security Group ID associated with your MSK cluster
-    Default: sg-0cSAMPLE  
+    Default: sg-22b59a6b
 #----------------------------------------
 Mappings:
   AWSInstanceType2Arch:

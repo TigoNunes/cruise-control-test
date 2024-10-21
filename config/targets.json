@@ -1,0 +1,22 @@
+[
+    {
+      "labels": {
+        "job": "jmx"
+      },
+      "targets": [
+        "b-1.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001",
+        "b-2.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001",
+        "b-3.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001"
+      ]
+    },
+    {
+      "labels": {
+        "job": "node"
+      },
+      "targets": [
+        "b-1.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001",
+        "b-2.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001",
+        "b-3.kafkauatdatamskcluste.n24vdd.c12.kafka.us-east-1.amazonaws.com:11001"
+      ]
+    }
+  ]
